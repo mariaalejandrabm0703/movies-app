@@ -22,7 +22,7 @@ export const useFetch = ( mavie ) => {
 
     }, [mavie])
 
-    return state; // { data:[], loading: true };
+    return state;
 }
 
 

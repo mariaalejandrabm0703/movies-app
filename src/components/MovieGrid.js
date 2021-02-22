@@ -4,16 +4,22 @@ import MovieItem from "./MovieItem";
 
 function MovieGrid({ movie }) {
   const { data, loading } = useFetch(movie);
-
+  console.log(data);
   return (
     <div className="container mt-2">
       <h3>{movie}:</h3>
 
-      {loading && <p>Loading</p>}
-      <div className="card-group">
-        {data.map((movie) => (
-          <MovieItem key={movie.id} movie={movie} />
-        ))}
+      {loading && (
+        <div className="spinner-border text-primary" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </div>
+      )}
+      <div className="row row-cols-1 row-cols-md-3 g-4">
+        {data.length !== 0 ? (
+          data.map((movie) => <MovieItem key={movie.id} movie={movie} />)
+        ) : (
+          <p>There are no data ...</p>
+        )}
       </div>
     </div>
   );

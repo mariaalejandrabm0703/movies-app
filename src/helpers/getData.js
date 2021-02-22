@@ -17,7 +17,7 @@ export const getData = async (movie) => {
   await axios
     .request(options)
     .then(function async(response) {
-        movies =  response.data.titles;
+        movies=response.data.titles;
     })
     .catch(function (error) {
       console.error(error);

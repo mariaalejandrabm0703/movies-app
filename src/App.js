@@ -5,7 +5,7 @@ import SearchMovie from './components/SearchMovie'
 
 function App() {
 
-  const [movies, setMovies] = useState(['men in black', 'princess']);
+  const [movies, setMovies] = useState([]);
 
   return (
     <div className="container mt-2">
@@ -16,9 +16,9 @@ function App() {
 
             <ol>
                 {
-                    movies.map( (movie, i)  => (
+                    movies.map( (movie)  => (
                         <MovieGrid 
-                            key={ i }
+                            key={ movie }
                             movie={ movie }
                         />
                     ))

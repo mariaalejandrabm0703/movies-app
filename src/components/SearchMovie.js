@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 function SearchMovie({ setMovies }) {
+
   const [inputValue, setInputValue] = useState("");
 
   const handleInputChange = (e) => {
@@ -11,7 +12,7 @@ function SearchMovie({ setMovies }) {
     e.preventDefault();
 
     if (inputValue.trim().length > 2) {
-      setMovies((movie) => [inputValue, ...movie]);
+      setMovies((movie) => [inputValue, ...movie,]);
       setInputValue("");
     }
   };
