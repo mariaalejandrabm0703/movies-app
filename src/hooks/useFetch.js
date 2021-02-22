@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
-import { getGifs } from '../helpers/getGifs';
+import { getData } from '../helpers/getData';
 
 
-export const useFetchGifs = ( category ) => {
+export const useFetch = ( mavie ) => {
     
     const [state, setState] = useState({
         data: [],
@@ -11,16 +11,16 @@ export const useFetchGifs = ( category ) => {
 
     useEffect( () => {
 
-        getGifs( category )
-            .then( imgs => {
+        getData( mavie )
+            .then( data => {
                 
                 setState({
-                    data: imgs,
+                    data: data,
                     loading: false
                 });
             })
 
-    }, [category])
+    }, [mavie])
 
     return state; // { data:[], loading: true };
 }

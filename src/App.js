@@ -5,7 +5,7 @@ import SearchMovie from './components/SearchMovie'
 
 function App() {
 
-  const [movies, setMovies] = useState(['Men in black', 'Princess']);
+  const [movies, setMovies] = useState(['men in black', 'princess']);
 
   return (
     <div className="container mt-2">
