@@ -1,13 +1,20 @@
-import React from 'react'
+import React from "react";
 
-function MovieItem({movie}) {
-    console.log('desde item',movie)
-
-    return (
-        <div className="container mt-2">
-        <h5>Movie items</h5>
-        </div>
-    )
+function MovieItem({ movie }) {
+    const divStyle = {
+        width: "10rem",
+      };
+  return (
+    <div className="card" style={divStyle}>
+      <img src={movie.image} className="card-img-top" />
+      <div className="card-body">
+        <h5 className="card-title">{movie.title}</h5>
+        <a href="#" >
+            More
+          </a>
+      </div>
+    </div>
+  );
 }
 
-export default MovieItem
+export default MovieItem;
