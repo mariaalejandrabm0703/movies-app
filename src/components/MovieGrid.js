@@ -1,10 +1,10 @@
 import React from 'react'
 import MovieItem from './MovieItem'
 
-function MovieGrid() {
+function MovieGrid({movie}) {
     return (
         <div className="container mt-2">
-        <h1>Grid movie</h1>
+        <h4>Grid movie: {movie}</h4>
         <MovieItem/>
         </div>
     )

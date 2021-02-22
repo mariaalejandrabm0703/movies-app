@@ -9,17 +9,17 @@ function App() {
 
   return (
     <div className="container mt-2">
-            <h2>Movies App</h2>
+            <h2>Search movies App</h2>
             <hr/>
             <SearchMovie setMovies={ setMovies } />
             <hr />
 
             <ol>
                 {
-                    movies.map( category  => (
+                    movies.map( (movie, i)  => (
                         <MovieGrid 
-                            key={ category }
-                            category={ category }
+                            key={ i }
+                            movie={ movie }
                         />
                     ))
                 }
