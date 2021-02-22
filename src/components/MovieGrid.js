@@ -4,7 +4,7 @@ import MovieItem from "./MovieItem";
 
 function MovieGrid({ movie }) {
   const { data, loading } = useFetch(movie);
-  console.log(data);
+
   return (
     <div className="container mt-2">
       <h3>{movie}:</h3>

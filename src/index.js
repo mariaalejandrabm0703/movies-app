@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import SearchMovies from "./SearchMovies"
 
-ReactDOM.render(<App />, document.getElementById("root"));
+
+ReactDOM.render(<SearchMovies />, document.getElementById("root"));
