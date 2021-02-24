@@ -1,6 +1,10 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
-function MovieItem({ movie }) {
+function MovieItem({ movie, prueba = false }) {
+
+ 
+
   const divStyle = {
     width: "10rem",
   };
@@ -9,7 +13,8 @@ function MovieItem({ movie }) {
       <img src={movie.image} className="card-img-top" />
       <div className="card-body">
         <h5 className="card-title">{movie.title}</h5>
-        <a href="#">More</a>
+  
+        <Link to={`./movie/${movie.id}`}  target="_blank">More...</Link>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { useFetch } from "../hooks/useFetch";
+import { useFetch } from "../hooks/useFetchMovies";
 import MovieItem from "./MovieItem";
 
 function MovieGrid({ movie }) {
@@ -16,7 +16,7 @@ function MovieGrid({ movie }) {
       )}
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {data.length !== 0 ? (
-          data.map((movie) => <MovieItem key={movie.id} movie={movie} />)
+          data.map((movie) => <MovieItem prueba={true} key={movie.id} movie={movie} />)
         ) : (
           <p>There are no data ...</p>
         )}

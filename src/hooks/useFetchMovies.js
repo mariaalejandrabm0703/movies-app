@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { getData } from '../helpers/getData';
+import { getMovieByName } from '../helpers/getData';
 
 
 export const useFetch = ( mavie ) => {
@@ -11,7 +11,7 @@ export const useFetch = ( mavie ) => {
 
     useEffect( () => {
 
-        getData( mavie )
+        getMovieByName( mavie )
             .then( data => {
                 
                 setState({
